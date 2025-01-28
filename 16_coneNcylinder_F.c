@@ -27,10 +27,10 @@ static void wireQuadSurfs(void)
 	/* Position and display GLU wire-frame cylinder. */
 	GLUquadricObj* cylinder; // Set name for GLU quadric object. 
 	glPushMatrix();
-	glTranslatef(0.0, 1.2, 0.8);
+	glTranslatef(-0.4, 1.2, 0.8);
 	cylinder = gluNewQuadric();
 	gluQuadricDrawStyle(cylinder, GLU_LINE);
-	gluCylinder(cylinder, 0.6, 0.6, 1.5, 6, 4);
+	gluCylinder(cylinder, 0.8, 0.8, 1.5, 8, 4);
 	glPopMatrix();
 	glFlush();
 }
@@ -40,7 +40,7 @@ static void winReshapeFcn(GLint newWidth, GLint newHeight)
 	glMatrixMode(GL_PROJECTION);
 	glOrtho(-2.0, 2.0, -2.0, 2.0, 0.0, 5.0);
 	glMatrixMode(GL_MODELVIEW);
-	glClear(GL_COLOR_BUFFER_BIT);
+	//glClear(GL_COLOR_BUFFER_BIT);
 }
 void main(int argc, char** argv)
 {
